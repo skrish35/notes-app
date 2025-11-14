@@ -1,3 +1,5 @@
+import { MdDelete } from 'react-icons/md';
+
 function NoteItem({ note, deleteNote }) {
     let borderColor = '';
     if (note.priority === 'high') {
@@ -23,7 +25,10 @@ function NoteItem({ note, deleteNote }) {
                 className='btn btn-link text-red-500 font-semibold hover:text-red-700'
                 onClick={() => deleteNote(note.id)}
             >
-                Delete
+                <span className='flex justify-center'>
+                    <MdDelete className='mt-1 mr-1'/>
+                    <span>Delete</span>
+                </span>
             </button>
         </div>
     )

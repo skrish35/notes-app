@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { FaPlus } from 'react-icons/fa6';
+import { BiSolidHide } from 'react-icons/bi';
+import { MdNoteAdd } from 'react-icons/md';
 import TextInput from './inputs/TextInput.jsx';
 import SelectInput from './inputs/SelectInput.jsx';
 import TextAreaInput from './inputs/TextAreaInput.jsx';
@@ -49,7 +52,17 @@ function NoteForm({ notes, setNotes }) {
                 className='p-3 rounded-lg shadow-md mb-4 w-full bg-purple-500 hover:bg-purple-700 text-white font-bold'
                 onClick={() => setIsFormVisible(!isFormVisible)}
             >
-                {isFormVisible ? 'Hide Note' : 'Add New Note'}
+                {isFormVisible ? (
+                    <div className='flex justify-center'>
+                        <BiSolidHide className='mt-1 mr-2'/>
+                        <span>Hide Note</span>
+                    </div>
+                ) : (
+                    <div className='flex justify-center'>
+                        <FaPlus className='mt-1 mr-2'/>
+                        <span>Add New Note</span>
+                    </div>
+                )}
             </button>
             {isFormVisible && (
                 <form className='mb-6' onSubmit={handleFormSubmit}>
@@ -100,7 +113,13 @@ function NoteForm({ notes, setNotes }) {
                     <button
                         className='w-full bg-purple-500 hover:bg-purple-700 p-4 rounded-lg text-white font-bold'
                         type = 'submit'
-                    >Add Note</button>
+                    >
+                        <span className='flex justify-center'>
+                            <MdNoteAdd className='mt-1 mr-2 text-lg'/>
+                            <span>Add Note</span>
+                        </span>
+
+                    </button>
                 </form>
             )}
         </>
