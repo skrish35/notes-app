@@ -69,6 +69,7 @@ function NoteForm({ notes, setNotes }) {
                     <TextInput
                         label='Title'
                         id='note-title'
+                        placeholder='Title...'
                         name='title'
                         value={formData.title}
                         required={true}
@@ -95,15 +96,16 @@ function NoteForm({ notes, setNotes }) {
                         value={formData.category}
                         onChange={handleFormChange}
                         options={[
-                            {label: 'Work', value: 'work'},
-                            {label: 'Personal', value: 'personal'},
-                            {label: 'Ideas', value: 'ideas'},
+                            { label: 'Work', value: 'work'},
+                            { label: 'Personal', value: 'personal'},
+                            { label: 'Ideas', value: 'ideas'},
                         ]}
                     />
 
                     <TextAreaInput
                         label='Description'
                         id='note-description'
+                        placeholder='Description...'
                         name='description'
                         value={formData.description}
                         onChange={handleFormChange}

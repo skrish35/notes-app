@@ -3,7 +3,7 @@ import NoteItem from './NoteItem';
 function NoteList({ notes, deleteNote }) {
     if (!notes || notes.length === 0) {
         return (
-            <h3 className='font-bold font-bold'>No Notes Found!!!</h3>
+            <h3 className='font-bold font-bold text-center text-gray-700'>No Notes Found!!!</h3>
         )
     }
     return (
