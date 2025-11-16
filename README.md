@@ -1,8 +1,8 @@
-📒 Notes Manager (React + Vite)
+# 📒 Notes Manager (React + Vite)
 
 A fast, modern, and intuitive Notes Management App built with React and Vite. This app helps you organize your notes by priority and category, making it easy to stay productive and keep track of what matters most.
 
-🚀 Features
+# 🚀 Features
 📝 Note Management
 
 Create, edit, and delete notes
@@ -11,7 +11,7 @@ Rich-text or simple text support (depending on your implementation)
 
 Auto-saving or manual save flow
 
-🎯 Prioritization
+# 🎯 Prioritization
 
 Assign priority levels (e.g., Low, Medium, High)
 
@@ -19,7 +19,7 @@ Filter notes by priority
 
 Color-coded priority badges for easy scanning
 
-🗂️ Categorization
+# 🗂️ Categorization
 
 Organize notes into categories
 
@@ -33,13 +33,13 @@ Search notes by title or content
 
 Combine filters (priority + category)
 
-💾 Local Storage Persistence
+# 💾 Local Storage Persistence
 
 Notes remain saved even after page refresh
 
 No backend required
 
-⚡ Built with Vite
+# ⚡ Built with Vite
 
 Ultra-fast development server
 
@@ -47,7 +47,7 @@ Optimized build output
 
 Hot Module Replacement (HMR)
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 React (hooks, components, context/state management)
 
@@ -57,7 +57,7 @@ CSS Modules / Tailwind / Styled Components (adjust based on your setup)
 
 LocalStorage API for lightweight persistence
 
-📦 Installation & Setup
+# 📦 Installation & Setup
 # Clone the repository
 git clone https://github.com/skrish35/notes-app.git
 
@@ -70,18 +70,12 @@ npm install
 # Start the development server
 npm run dev
 
-🔧 Available Scripts
+# 🔧 Available Scripts
 Script	Description
 npm run dev	Run app in development mode
 npm run build	Create production build
 npm run preview	Preview the production build
 
-
-🤝 Contributing
-
+# 🤝 Contributing
 Contributions, ideas, and feature requests are always welcome!
 Just open an issue or submit a pull request.
-
-📜 License
-
-This project is licensed under the MIT License — feel free to use it however you'd like.
