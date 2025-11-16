@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 import { BiSolidHide } from 'react-icons/bi';
 import { MdNoteAdd } from 'react-icons/md';
@@ -6,14 +6,19 @@ import TextInput from './inputs/TextInput.jsx';
 import SelectInput from './inputs/SelectInput.jsx';
 import TextAreaInput from './inputs/TextAreaInput.jsx';
 
-function NoteForm({ notes, setNotes }) {
+function NoteForm({ notes, setNotes, noteToEdit, updateNote }) {
     const [formData, setFormData] = useState({
         title: '',
         priority: 'low',
         category: 'work',
         description: '',
     });
+
     const [isFormVisible, setIsFormVisible] = useState(false);
+
+    useEffect(() => {
+        setFormData(noteToEdit.note);
+    }, [noteToEdit])
 
     const handleFormChange = (e) => {
         setFormData({
@@ -29,13 +34,22 @@ function NoteForm({ notes, setNotes }) {
         if (!formData.title || !formData.description) return;
 
         // Construct new note.
-        const newNote = {
-            id: Date.now(),
-            ...formData,
+        let newNote = {};
+        if (noteToEdit.isEdit === true) {
+            newNote = {
+                id: noteToEdit.note.id,
+                ...formData,
+            }
+            // Update note
+            updateNote(newNote);
+        } else {
+            newNote = {
+                id: Date.now(),
+                ...formData,
+            }
+            // Set notes in state.
+            setNotes([newNote, ...notes]);
         }
-
-        // Set notes in state.
-        setNotes([newNote, ...notes]);
 
         // Reset note form.
         setFormData({

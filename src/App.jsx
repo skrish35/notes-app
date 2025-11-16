@@ -9,6 +9,8 @@ function App() {
         return notes || [];
     });
 
+    const [noteToEdit, setNoteToEdit] = useState({ note: {}, isEdit: false});
+
     useEffect(() => {
         localStorage.setItem('notes', JSON.stringify(notes));
     }, [notes])
@@ -18,6 +20,22 @@ function App() {
         if (confirmDelete) {
             setNotes(notes.filter((note) => note.id !== id));
         }
+    }
+
+    const onEditNote = (note) => {
+        setNoteToEdit({ note: note, isEdit: true });
+    }
+
+    const updateNote = (updatedNote) => {
+        setNotes(notes.map((note) => {
+            if (note.id === updatedNote.id) {
+                return {
+                    id: updatedNote.id,
+                    ...updatedNote
+                }
+            }
+            return note;
+        }))
     }
 
     return (
@@ -30,8 +48,8 @@ function App() {
                 />
                 <span className='pl-2 m-2'>Notes App</span>
             </h2>
-            <NoteForm notes={notes} setNotes={setNotes} />
-            <NoteList notes={notes} deleteNote={deleteNote}/>
+            <NoteForm notes={notes} setNotes={setNotes} noteToEdit={noteToEdit} updateNote={updateNote}/>
+            <NoteList notes={notes} deleteNote={deleteNote} onEditNote={onEditNote}/>
         </div>
     )
 }
