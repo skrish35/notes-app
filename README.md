@@ -1,16 +1,87 @@
-# React + Vite
+📒 Notes Manager (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, modern, and intuitive Notes Management App built with React and Vite. This app helps you organize your notes by priority and category, making it easy to stay productive and keep track of what matters most.
 
-Currently, two official plugins are available:
+🚀 Features
+📝 Note Management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create, edit, and delete notes
 
-## React Compiler
+Rich-text or simple text support (depending on your implementation)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Auto-saving or manual save flow
 
-## Expanding the ESLint configuration
+🎯 Prioritization
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Assign priority levels (e.g., Low, Medium, High)
+
+Filter notes by priority
+
+Color-coded priority badges for easy scanning
+
+🗂️ Categorization
+
+Organize notes into categories
+
+Custom category creation
+
+Filter notes by category
+
+🔍 Search & Filtering
+
+Search notes by title or content
+
+Combine filters (priority + category)
+
+💾 Local Storage Persistence
+
+Notes remain saved even after page refresh
+
+No backend required
+
+⚡ Built with Vite
+
+Ultra-fast development server
+
+Optimized build output
+
+Hot Module Replacement (HMR)
+
+🛠️ Tech Stack
+
+React (hooks, components, context/state management)
+
+Vite (bundling & dev server)
+
+CSS Modules / Tailwind / Styled Components (adjust based on your setup)
+
+LocalStorage API for lightweight persistence
+
+📦 Installation & Setup
+# Clone the repository
+git clone https://github.com/skrish35/notes-app.git
+
+# Navigate into the project
+cd notes-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+🔧 Available Scripts
+Script	Description
+npm run dev	Run app in development mode
+npm run build	Create production build
+npm run preview	Preview the production build
+
+
+🤝 Contributing
+
+Contributions, ideas, and feature requests are always welcome!
+Just open an issue or submit a pull request.
+
+📜 License
+
+This project is licensed under the MIT License — feel free to use it however you'd like.
